@@ -91,7 +91,9 @@ for(element of arr) {
             Number(element.toString().slice(0, (element.toString().indexOf(".")) + 3)) :
             element) :
     (typeof element == "number" && !isNaN(element)) ?
-        arr1.push((element.toString().includes('.')) ? Number(element.toFixed(2)) : element) :
+        arr1.push((element.toString().includes('.')) ?
+            Number(element.toFixed(2)) :
+            element) :
         null;
 }
 
